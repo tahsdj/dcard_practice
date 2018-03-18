@@ -1,0 +1,350 @@
+
+
+.content-detail-container
+	position: fixed
+	width: calc(100%)
+	max-width: calc(1000px)
+	height: calc(100vh)
+	top: 0px
+	left: 50%
+	transform: translate(-50%,0px)
+	background-color: #FAFAFA
+	z-index: 99
+
+	header
+		position: absolute
+		top: 0px
+		left: 0px
+		background-color: #FAFAFA
+		width: calc(100% - 120px)
+		padding: 22px 60px
+		height: auto
+		display: inline-flex
+		flex-direction: row
+
+		.profile
+			display: flex
+			width: 40px
+			height: 40px
+			margin: 0px 10px 0px 0px
+			justify-content: center
+			align-items: center
+			border-radius: 50%
+			background-color: #2490BF
+			color: white
+			font-size: 1.5em
+
+			.profile-info
+				color: #585858
+	
+	#content-layout
+		display: block
+		padding: 0px 60px
+		width: calc(100% - 120px)
+		padding-top: 80px
+		height: calc(100vh - 140px)
+
+		//height: 100vh
+		overflow-y: auto
+		&::-webkit-scrollbar-track
+			border-radius: 3px
+		&::-webkit-scrollbar
+			width: 5px
+			background-color: rgba(200,200,200,0.1)
+		&::-webkit-scrollbar-thumb
+			border-radius: 3px
+			background-color: rgba(180,180,180,0.5)
+
+		>div
+			display: inline-flex
+			width: calc(100%)
+
+		.title
+			flex-direction: column
+			width: calc(100%)
+			.live-title
+				display: inline-flex
+				flex-direction: row
+				align-items: center
+				font-size: 1.8em
+				font-weight: 500
+				margin: 5px 0px
+
+				>.live-icon
+					display: flex
+					width: 15px
+					height: 15px
+					background-color: red
+					border-radius: 50%
+					margin: 5px
+
+				>span
+					color: red
+			.time
+				font-size: 0.9em
+				color: #9A9A9A
+
+		.edit-video-url
+			display: inline-flex
+			flex-direction: column
+			align-items: flex-start
+			width: calc(100%)
+			padding: 20px 0px
+
+			input
+				width: calc(90% - 40px)
+				padding: 20px
+				outline: none
+				background-color: #FFFFFF
+				border: 1px solid rgb(240,240,240)
+				font-size: 1.1em
+				border-radius: 3px
+
+				&::placeholder
+					color: #A1A1A1
+		.video-container
+			flex-direction: column
+			position: relative
+			padding: 20px 0px
+			height: 460px
+			align-items: center
+			justify-content: center
+
+			>span
+				display: flex
+				width: 100%
+				height: 460px
+				>iframe
+					width: 90%
+					height: 460px
+
+			.disabled-interface
+				position: absolute
+				top: 0
+				left: 0
+				display: flex
+				width: 100%
+				height: 100%
+				//z-index: -1
+		.rest-time-container
+			flex-direction: column
+			padding: 20px 0px
+			width: calc(100%)
+			align-items: flex-start
+
+			.time-bar
+				display: flex
+				position: relative
+				width: calc(90%)
+				height: 15px
+				background-color: rgba(200,200,200,1)
+				
+				.now-rest-time
+					display: flex
+					width: calc(90%)
+					height: 100%
+					left: 0
+					top: 0
+					background-color: #2490BF
+					transition: width 1s
+			.clock-btn-container
+				display: inline-flex
+				flex-direction: row
+				width: calc(90%)
+				padding: 5px 0px
+				align-items: center
+				
+				button
+					display: flex
+					height: 100%
+					padding: 5px 5px
+					border: hidden
+					outline: none
+					align-items: center
+					font-size: 1em
+					background-color: transparent
+					transition: background-color 0.3s
+					cursor: pointer
+					border: 1px solid #1A5E8D
+					border-radius: 5px
+					color: #1A5E8D
+					font-size: 1.3em
+
+					&:hover
+						background-color: #F6F6F6
+
+					&:active
+						background-color: rgba(#2490BF,0.5)
+
+					img
+						width: 15px
+						height: 15px
+						padding: 2px
+
+
+		.images-layout
+			flex-direction: column
+			padding: 20px 0px
+			align-items: center
+			justify-content: center
+
+			img
+				max-width: 100%
+
+		
+
+		#comments-container, .play-list-container
+			flex-direction: column
+			width: calc(100%)
+			align-items: center
+			padding: 40px 0px
+
+			.total-comments
+				display: inline-flex
+				flex-direction: row
+				width: calc(100%)
+				justify-content: flex-start
+				border-bottom: 1px solid #DEDEDE
+				color: #A8A8A8
+				padding: 3px 0px
+
+			.comment
+				display: inline-flex
+				flex-direction: column
+				width: calc(100%)
+				padding: 20px 0px
+				border-bottom: 1px solid #DEDEDE
+				margin-bottom: 3px
+
+				.user-info
+					display: inline-flex
+					flex-direction: row
+					width: calc(100%)
+					padding: 10px 0px
+					align-items: flex-start
+					
+					.user-img
+						display: flex
+						width: 40px
+						height: 40px
+						min-width: 40px
+						margin: 0px 0px 0px 0px
+						justify-content: center
+						align-items: center
+						border-radius: 50%
+						background-color: #2490BF
+						color: white
+						font-size: 1.5em
+
+					.visitor
+						background-color: black
+
+					.info
+						display: flex
+						flex-direction: column
+						align-items: flex-start
+						padding: 0px 10px
+						span
+							&:nth-child(2)
+								color: #969696
+
+				.content
+					display: flex
+					width: calc(100%)
+					padding: 10px 0px
+
+		.play-list-container
+			align-items: flex-start
+			.total-playlists
+				display: inline-flex
+				flex-direction: row
+				width: calc(100%)
+				justify-content: flex-start
+				//border-bottom: 1px solid #DEDEDE
+				color: #A8A8A8
+				padding: 5px 0px
+
+			.comment
+				width: calc(90%)
+				padding: 5px 0px
+				background-color: rgba(245, 248, 251, 0.17)
+				border-bottom: none
+				flex-direction: row
+				position: relative
+
+				.video-image-container
+					display: flex
+					width: 80px
+					height: 70px
+					padding: 10px 10px
+					//margin: 0px 10px 0px 0px
+					//border: 1px solid gray
+
+					img
+						width: 80px
+						height: 70px
+
+				.user-info-container
+					display: inline-flex
+					flex-direction: column
+
+					.content
+						padding: 0
+			
+			.now-playing
+				background-color: rgba(180, 190, 202, 0.17)
+
+				&::before
+					content: ''
+					position: absolute
+					display: flex
+					width: 0
+					height: 0
+					top: 50%
+					transform: translate(-20px, -50%)
+					border-top: 10px solid transparent
+					border-bottom: 10px solid transparent
+					border-left: 15px solid #8e8b8b
+	
+	.turn-page-icon
+		display: inline-flex
+		flex-direction: row
+		justify-content: center
+		position: absolute
+		top: 50%
+		transform: translate(0px,-50%)
+		cursor: pointer
+		border-radius: 4px
+		>div
+			display: none
+			background-color: #FAFAFA
+			border: none
+
+		&:hover
+			background-color: hsla(0,0%,100%,.3)	
+
+			>div
+				display: inline-flex
+				min-width: 450px
+
+		img.icon
+			position: absolute
+			top: 50%
+			transform: translate(0px,-50%)
+			width: 60px
+			height: 60px
+
+	.next
+		right: calc(-90px)
+		padding-right: 90px
+		img.icon
+			right: 20px
+
+	.back
+		left: calc(-90px)
+		padding-left: 90px
+
+		img.icon
+			left: 20px
+
+		

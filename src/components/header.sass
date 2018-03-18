@@ -1,0 +1,286 @@
+header
+	display: flex
+	flex-direction: row
+	width: calc(100% - 60px)
+	//max-width: 1000px
+	padding: 0px 30px
+	align-items: center
+	height: 60px
+	background-color: #144a65
+	z-index: 1
+
+	.whole-screen
+		position: fixed
+		display: inline-flex
+		width: 100%
+		height: 100vh
+
+	.header-container
+		display: flex
+		flex-direction: row
+		width: calc(100%)
+		max-width: 1200px
+		min-width: 880px
+		height: 100%
+		align-items: center
+		justify-content: space-between
+
+		.left-container
+			display: flex
+			flex-direction: row
+			align-items: center
+
+			.logo
+				display: flex
+				width: 74px
+				height: 30px
+				align-items: flex-end
+
+				span
+					color: white
+					&:nth-child(1)
+						font-size: 2em
+						line-height: 1
+					&:nth-child(2)
+						font-size: 1.5em
+
+			#search
+				display: flex
+				padding: 0px 0px 0px 10px
+				flex-direction: row
+				align-items: center
+
+
+				input
+					width: 372px
+					height: 30px
+					padding: 0px 10px
+					outline: none
+					border: none
+					border-radius: 2px 0px 0px 2px
+					background-color: #26678c
+					border: 1px solid #00588A
+					color: white
+
+					&::placeholder
+						color: #89B2C9
+
+				button
+					padding: 5px 10px
+					border: 1px solid #00588A
+					border-radius: 0px 2px 2px 0px
+					outline: none
+					background-color: #09527b
+
+					span
+						display: flex
+						width: 20px
+						height: 20px
+						justify-content: center
+						align-items: center
+
+						img
+							height: 70%
+							width: 70%
+	
+	.right-container
+		display: flex
+		padding: 5px 0px
+		height: 100%
+		width: 270px
+		flex-direction: row
+		align-items: center
+		justify-content: center
+		
+		ul
+			display: flex
+			flex-direction: row
+			align-items: center
+			padding: 0
+			margin: 0
+			height: 100%
+			justify-content: space-between
+			width: calc(100%)
+
+			.clicked
+				background-color: #183c50
+
+			li
+				position: relative
+				list-style-type: none
+				display: flex
+				height: calc(100% - 40px)
+				padding: 20px
+
+				flex-direction: column
+				justify-content: center
+
+				&:hover
+					background-color: #183c50
+
+					.title-name
+						opacity: 1
+	
+				span.icon-label
+					display: flex
+					width: 20px
+					height: 20px
+
+					img
+						width: 100%
+						height: 100%
+
+				.title-name
+					position: absolute
+					top: 100%
+					left: 0
+					padding: 5px 10px
+					border-radius: 5px
+					text-align: center
+					width: calc(100% - 20px)
+					height: calc(32px - 10px)
+					background-color: #323232
+					color: white
+					opacity: 0
+					box-shadow: 1px 1px 3px rgba(0,0,0,.5)
+					font-size: 0.8em
+					
+					&:after
+						content: ""
+						position: absolute
+						bottom: 100%
+						left: 50%
+						transform: translate(-50%,0px)
+						width: 0
+						height: 0
+						border: 0
+						border-right: 10px solid rgba(#006AA6,0)
+						border-left: 10px solid rgba(#006AA6,0)
+						border-bottom: 5px solid #323232
+				
+				.notification-container
+					position: absolute
+					display: inline-flex
+					flex-direction: column
+					top: 100%
+					right: 0
+					padding: 5px 0px
+					border-radius: 3px
+					text-align: center
+					width: calc(400px - 0px)
+					height: 500px
+					background-color: #FFFFFF
+					color: black
+					box-shadow: 1px 1px 3px rgba(0,0,0,.5)
+					font-size: 0.8em
+
+					&:after
+						content: ""
+						position: absolute
+						bottom: 100%
+						right: 10px
+						transform: translate(-50%,0px)
+						width: 0
+						height: 0
+						border: 0
+						border-right: 10px solid rgba(#FFFFFF,0)
+						border-left: 10px solid rgba(#FFFFFF,0)
+						border-bottom: 6px solid #FFFFFF
+
+					.labels-title
+						display: inline-flex
+						flex-direction: row
+						width: calc(100% - 20px)
+						padding: 5px 10px 
+						justify-content: space-between
+						align-items: center
+						border-bottom: 1px solid #EFEFEF
+
+						span.label
+							display: inline-flex
+							width: auto
+
+							&:nth-child(2)
+								color: #59AAD8
+								cursor: pointer
+							
+					.notification-card
+						display: inline-flex
+						position: relative
+						flex-direction: row
+						width: calc(100% - 20px)
+						padding: 5px 10px
+						justify-content: flex-start
+						border-bottom: 1px solid #EFEFEF
+						cursor: pointer
+
+						&:after
+							content: ""
+							position: absolute
+							right: 10px
+							top: 10px
+							width: 8px
+							height: 8px
+							padding: 0
+							border-radius: 50%
+							opacity: 0
+							border: 1px solid rgb(200,200,200)
+
+						&:hover
+							background-color: #FAFAFA	
+
+							&:after
+								opacity: 1
+
+						.notification-img
+							display: flex
+							padding: 5px
+							width: calc(35px + 5px)
+							height: calc(35px + 5px)
+							min-width: calc(35px + 5px)
+							min-height: calc(35px + 5px)
+							justify-content: center
+							align-items: center
+
+							img
+								width: 100%
+								height: 100%
+								border-radius: 10px
+							>span
+								display: flex
+								justify-content: center
+								align-items: center
+								width: 100%
+								height: 100%
+								border-radius: 10px
+								background-color: #2490BF
+								font-size: 1.5em
+								color: white
+
+						.info-box
+							display: flex
+							flex-direction: column
+							max-width: calc(100% - 40px)
+							align-items: center
+						
+							p
+								padding: 5px 30px 5px 5px
+								margin: 0
+								text-align: left
+								font-size: 14px
+								color: #006aa6
+
+							span.time
+								display: flex
+								width: calc(100% - 10px)
+								text-align: left
+								padding: 0px 5px 5px 5px
+								color: #a8a8a8
+
+		span.more-btn
+			display: flex
+			padding: 10px
+
+			img
+				width: 10px
+				height: 10px

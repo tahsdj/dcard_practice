@@ -1,0 +1,274 @@
+
+.content-container
+	display: flex
+	flex-direction: column
+	width: calc(100% - 220px)
+	padding: 15px 40px
+	margin: 10px 0px 50px 0px
+	border-radius: 3px
+	max-width: calc(720px - 80px)
+	min-width: 500px
+	min-height: 500px
+	background-color: #FAFAFA
+
+	.header
+		display: flex
+		position: relative
+		flex-direction: row
+		height: 60px
+		border-bottom: 1px solid #DEDEDE
+		align-items: center
+
+		.category-name
+			padding: 10px 20px
+			font-size: 1.2em
+
+		.category-list-container
+			display: inline-flex
+			height: 100%
+			padding: 0px 10px
+
+			span
+				display: flex
+				flex-direction: column
+				justify-content: center
+				margin: 0px 10px
+				height: 100%
+				color: #969696
+				
+			.selected
+				color: #3397CF
+				border-bottom: 1px solid #3397CF
+
+		button
+			position: absolute
+			right: 20px
+			top: 50%
+			transform: translate(0px,-50%)
+			padding: 8px 20px 8px 20px
+			background-color: #3397CF
+			border-radius: 3px
+			outline: none
+			border: 0
+			color: white
+			font-size: 1em
+			transition: background-color 0.3s
+
+			&:hover
+				background-color: #006AA6
+
+	.post-loading
+		display: flex
+		position: relative
+		flex-direction: column
+		//justify-content: flex-start
+		border-bottom: 1px solid #DEDEDE
+		align-items: flex-start
+		padding: 20px 20px
+		width: calc(100% - 40px)
+		border: none
+		
+		>div
+			display: flex
+			flex-direction: row
+			width: calc(80% - 10px)
+			padding: 0px 5px
+			background-color: rgb(230,230,230)
+			height: 10px
+			margin: 5px 0px
+
+			&:nth-child(1)
+				width: calc(50% - 10px)
+			&:nth-child(3)
+				width: calc(70% - 10px)
+	.row
+		
+	.filter
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100vh
+		background-color: rgba(0,0,0,.5)
+		z-index: 1
+
+	.content-detail-container
+		position: fixed
+		width: calc(100%)
+		max-width: calc(1000px)
+		height: calc(100vh)
+		top: 0px
+		left: 50%
+		transform: translate(-50%,0px)
+		background-color: #FAFAFA
+		z-index: 99
+
+		header
+			position: absolute
+			top: 0px
+			left: 0px
+			background-color: #FAFAFA
+			width: calc(100% - 120px)
+			padding: 22px 60px
+			height: auto
+			display: inline-flex
+			flex-direction: row
+
+			.profile
+				display: flex
+				width: 40px
+				height: 40px
+				margin: 0px 10px 0px 0px
+				justify-content: center
+				align-items: center
+				border-radius: 50%
+				background-color: #2490BF
+				color: white
+				font-size: 1.5em
+
+				.profile-info
+					color: #585858
+		
+		#content-layout
+			display: block
+			padding: 0px 60px
+			width: calc(100% - 120px)
+			padding-top: 80px
+			height: calc(100vh - 140px)
+			//height: 100vh
+			overflow-y: auto
+			&::-webkit-scrollbar-track
+				border-radius: 3px
+			&::-webkit-scrollbar
+				width: 5px
+				background-color: rgba(200,200,200,0.1)
+			&::-webkit-scrollbar-thumb
+				border-radius: 3px
+				background-color: rgba(180,180,180,0.5)
+
+			>div
+				display: inline-flex
+				width: calc(100%)
+
+			.title
+				flex-direction: column
+				width: calc(100%)
+				h3
+					font-size: 1.8em
+					font-weight: 500
+					margin: 5px 0px
+				.time
+					font-size: 0.9em
+					color: #9A9A9A
+
+			.images-layout
+				flex-direction: column
+				padding: 20px 0px
+				align-items: center
+				justify-content: center
+
+				img
+					max-width: 100%
+
+			#comments-container
+				flex-direction: column
+				width: calc(100%)
+				align-items: center
+				padding: 40px 0px
+
+				.total-comments
+					display: inline-flex
+					flex-direction: row
+					width: calc(100%)
+					justify-content: flex-start
+					border-bottom: 1px solid #DEDEDE
+					color: #A8A8A8
+					padding: 3px 0px
+
+				.comment
+					display: inline-flex
+					flex-direction: column
+					width: calc(100%)
+					padding: 20px 0px
+					border-bottom: 1px solid #DEDEDE
+
+					.user-info
+						display: inline-flex
+						flex-direction: row
+						width: calc(100%)
+						padding: 10px 0px
+						align-items: center
+						
+						.user-img
+							display: flex
+							width: 40px
+							height: 40px
+							margin: 0px 0px 0px 0px
+							justify-content: center
+							align-items: center
+							border-radius: 50%
+							background-color: #2490BF
+							color: white
+							font-size: 1.5em
+
+						.visitor
+							background-color: black
+
+						.info
+							display: flex
+							flex-direction: column
+							align-items: flex-start
+							padding: 0px 10px
+							span
+								&:nth-child(2)
+									color: #969696
+
+					.content
+						display: flex
+						width: calc(100%)
+						padding: 10px 0px
+
+				
+		
+		.turn-page-icon
+			display: inline-flex
+			flex-direction: row
+			justify-content: center
+			position: absolute
+			top: 50%
+			transform: translate(0px,-50%)
+			cursor: pointer
+			border-radius: 4px
+			>div
+				display: none
+				background-color: #FAFAFA
+				border: none
+
+			&:hover
+				background-color: hsla(0,0%,100%,.3)	
+
+				>div
+					display: inline-flex
+					min-width: 450px
+
+			img.icon
+				position: absolute
+				top: 50%
+				transform: translate(0px,-50%)
+				width: 60px
+				height: 60px
+
+		.next
+			right: calc(-90px)
+			padding-right: 90px
+			img.icon
+				right: 20px
+
+		.back
+			left: calc(-90px)
+			padding-left: 90px
+
+			img.icon
+				left: 20px
+
+			
