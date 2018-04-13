@@ -4,7 +4,7 @@ A new idea that we can share youtube videos on Dcard and watch together in the s
 
 ### Example
 
-* link:
+* link: https://drrr-7cacb.firebaseapp.com/ 
 
 ### Installation
 
